@@ -1,0 +1,246 @@
+.hero__container{
+    overflow: hidden;
+    width: 100%;
+    height: 85vh;
+    background-image:linear-gradient(to bottom, #bfdef7, #ffffff, #ffffff, #ffffff, #ffffff);;
+}
+.category__container{
+    overflow: hidden;
+    width: 95%;
+    padding: 1.25em;
+}
+
+.featured__slider__wrapper{
+    display: flex;
+    
+    position: relative;
+    
+    overflow: hidden;
+    margin: 0px 0.2em;
+    
+}
+.featured__slider__img__wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    transition: all 0.6s ease-in-out; 
+    padding: 1.25em;
+}
+
+.left__button >button, .right__button > button{
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: none;
+    
+    background-color: white;
+    cursor: pointer;
+}
+
+.left__button > button{
+    top: 20vh ;
+    left: 1.25em;
+    z-index: 1000;
+}
+
+.right__button > button{
+    top: 20vh;
+    right:1.25em;
+    z-index: 1000;
+}
+.left__button >button:hover, .right__button > button:hover{
+    box-shadow: 0px 0px 2px 2px #bfdef7;
+}
+
+
+.category__card__wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.new__image__wrapper{
+    overflow: hidden;
+    width: 95%;
+    margin-bottom: 2em;
+    position: relative;
+}
+.new__image__slider{
+    display: flex ;
+    transition: all 1.2s ease-in-out;
+}
+.ranking__nav__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2em;
+}
+
+.short__options{
+    display: flex;
+}
+.short__options>h2{
+    padding: 0.5em;
+    margin-right: 10px;
+    margin-bottom: -2px;
+    color: #00000098;
+    cursor: pointer;    
+}
+.short__buttons{
+    display: flex;
+}
+
+.custom__select{
+    position: relative;
+    width: 100px;
+    
+}
+.custom__select >input {
+    width: 50%;
+    padding: 0.75em;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.custom__select>.option__container{
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border: 1px solid gray;
+    list-style: none;
+    border-radius: 10px;
+    width: 75%;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 4px lightgray;
+    /* display: none; */
+}
+
+.option__container >li{
+    
+    list-style: none;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    cursor: pointer;
+}
+.option__container >li:hover{
+    box-shadow: 2px 2px 2px 4px lightgray;
+}
+.option__container >li:last-child{
+    border-bottom: none;
+}
+.short__buttons > button{
+    padding: 0.75em;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+   
+}
+
+
+.tables{
+    display: flex;
+    justify-content: space-between;
+}
+.ranking__table__container{
+    width: 100%;
+    height: max-content;
+    padding: 0px 2em;
+}
+.ranking__table__container >table{
+    width: 42vw;
+    border-collapse: collapse
+}
+.table__row__header{
+   font-size: small;
+   font-weight: bold;
+   color:gray
+}
+.table__body__row{
+    height: 100px;
+    font-size: 1em;
+    color: #00000098;
+    font-weight: 600;
+}
+.table__body__row:hover{
+    background-color: #FAFAFB;
+    
+}
+.table__first__col{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.table__img{
+    width: 80px;
+    height: 80px;
+    margin:0em 1em;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:1200px){
+    .tables{
+        height: 60vh;
+    }
+    .category__card__wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+
+}
+@media screen and (max-width:1020px){
+    .tables{
+        flex-direction: column;
+        font-size: 24px;
+        height: min-content;
+        
+    }
+    .ranking__table__container{
+        height: max-content;
+    }
+    .ranking__table__container >table{
+        min-width: 75vw;
+        border-collapse: collapse
+    }
+    .table__body__row{
+        font-size: 0.75em;
+        height: max-content;
+    }
+    .footer__top__container{
+        
+        flex-direction: column;
+        align-items: center;
+    }
+    .top__left__container{
+        width: 100%;
+    }
+    .category__card__wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:770px){
+    
+    
+    .ranking__table__container >table{
+        width: 100%;
+        border-collapse: collapse
+    }
+    .social__media__button{
+        width: 16px;
+        height: 16px;
+    }
+    .category__card__wrapper{
+        grid-template-columns: 1fr;
+    }
+}

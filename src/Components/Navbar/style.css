@@ -1,0 +1,212 @@
+.nav__container{
+        
+    display: flex;
+    align-items: center;
+    padding: 0px var(--base-padding);
+    height: 4.25em;
+    /* background-image: var(--header-bg-clr); */
+}
+
+.logo__container{
+    padding: var(--base-padding);
+}
+
+.logo__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:var(--main-heading) ;
+    font-weight: bolder;
+}
+.logo__button > h2{
+    margin: 0px 5px;
+    font-weight: bold;
+}
+.search__container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search__box{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    background-color: #ffffff90;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.search__input__box{
+    width: 100%;
+}
+.search__input__box > input {
+    width: 95%;
+    font-size: var(--base-font-size-large);
+    padding: var(--base-padding);
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.search__box:hover{
+    background-color: #ffffff;
+}
+
+.menu__item__container{
+    flex: 0.75;
+    z-index: 1000;
+}
+
+.menu__item__container > ul{
+    position: relative;
+    display: flex;
+    list-style: none;
+    /* align-items: center; */
+    justify-content: space-between;
+    font-size: var(--base-font-size-large);
+    font-weight: bold;
+    text-decoration: none;   
+}
+
+.menu__item__container :hover > .submenu__container{
+    display: block;
+}
+.submenu__container{
+    position: absolute;
+    height: min-content;
+    /* border: 2px solid #000000; */
+    border-radius: 10px;
+    display: none;
+    overflow-y: scroll;
+    height: 80vh;
+    /* margin-top: 20px;    */
+}
+
+.submenu__items:hover{
+    box-shadow: 0px 2px 2px 4px #DBE6FA;
+}
+
+.submenu__items{
+    font-size: var(--base-font-size-medium);
+    padding: 1em;
+    background-color: var(--submenu-clr);
+    border-bottom: 1px solid #00000010;
+    overflow:hidden;
+    
+    
+}
+.submenu__items:first-child{
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+}
+
+
+.submenu__items:last-child{
+    border-bottom: none;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+}
+
+.submenu__items > a {
+    text-decoration: none;
+    color: var(--main-heading);
+}
+
+.menu__icon__button__contaiener{
+    flex: 0.40;    
+}
+.menu__icon__button__contaiener > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.nav__icon__button{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav__icon__button:hover{
+    color: #00000090;
+}
+
+.ham__menu__container{
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    background-color: white;
+    z-index: 10000;
+    top:70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ham__menu__container>ul{
+    width: 100%;
+    text-decoration: none;
+}
+
+
+
+/*-------------------------------------------media-querries-------------------------------------------*/
+
+/*for small desktop screens*/
+@media screen and (max-width:1200px){
+    .menu__item__container{
+        display: none;
+    }
+    .menu__item{
+        font-size: 30px;
+        font-weight: bold;
+        list-style: none;
+        padding: 10px;
+        width: 50%;
+        border: 1px solid black;
+
+    }
+    .menu__item:first-child{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .menu__item:last-child{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .submenu__container{
+        left: 60%;
+        top: 20px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        font-size: 30px;
+    }
+
+    .ham__nav__item{
+        font-size: 30px;
+        font-weight: bolder;
+        list-style: none;
+        padding: 10px 0px ;
+        width: 100%;
+    }
+
+    .ham__sub__nav{
+        display: none;
+        color: #00000090;
+    }
+
+    .ham__nav__item :hover > .ham__sub__nav{
+        display: block;
+    }
+}
+
+
+
+/*for tablet screen*/
+/*for small tab screen*/
+/*for mobile screen*/
